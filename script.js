@@ -1,69 +1,154 @@
 'use strict';
 
-var name = prompt("Welcome! What is your name?!?!"); 
 
-var name = name.toUpperCase(name); 
-   
-alert(name + "!" + " Where have you been all my life?!?!?");
+// Ask Name 
+var name = prompt('Welcome! What is your name?!?!');
 
-var answer1 = prompt("Did I go to the University of Washington?");
+name = name.toUpperCase(name);
 
-var answer1 = answer1.toUpperCase();
+alert(name + '!' + ' Where have you been all my life?!?!?');
+
+var display = 0 ;
+
+// Question 1
+var answer1 = prompt('Did I go to the University of Washington?');
+
+answer1 = answer1.toUpperCase();
 
 console.log(answer1);
 
-if (answer1 == "NO") {
-  alert("Correct!"); 
-} else if (answer1 == "YES") {
-  alert("oops, read again");
+while (answer1 !== "YES" && answer1 !== "NO"){
+  answer1 = prompt("yes or no please!").toUpperCase()
 }
 
-var answer2 = prompt("Is my school in the state capitol?");
+if (answer1 == 'NO') {
+  alert('Correct!');
+  display = (display + 1)
+} else if (answer1 == 'YES') {
+  alert('oops, read again');
+}
 
-var answer2 = answer2.toUpperCase();
+
+// Question 2
+var answer2 = prompt('Is my school in the state capitol?');
+
+answer2 = answer2.toUpperCase();
 
 console.log(answer2);
 
-if (answer2 == "YES"){
-  alert("Correct!");
-}  else if (answer2 == "NO") {
-  alert("oops, read again");
+while (answer2 !== "YES" && answer2 !== "NO"){
+  answer2 = prompt("yes or no please!").toUpperCase()
 }
 
-var answer3 = prompt("Was I an Opera Performer?");
+if (answer2 == 'YES'){
+  alert('Correct!');
+  display = (display + 1)
+} else if (answer2 == 'NO') {
+  alert('oops, read again');
+}
 
-var answer3 = answer3.toUpperCase();
+
+//Question 3
+var answer3 = prompt('Was I an Opera Performer?');
+
+answer3 = answer3.toUpperCase();
 
 console.log(answer3);
 
-if (answer3 == "YES"){
-  alert("Correct!");
-}  else if (answer3 == "NO") {
-  alert("oops, read again");
+while (answer3 !== "YES" && answer3 !== "NO"){
+  answer3 = prompt("yes or no please!").toUpperCase()
 }
 
-var answer4 = prompt("Most recently I worked in Cannabis Tech?");
+if (answer3 === 'YES'){
+  alert('Correct!');
+  display = (display + 1)
+} else if (answer3 === 'NO') {
+  alert('oops, read again');
+}
 
-var answer4 = answer4.toUpperCase();
+
+// Question 4
+var answer4 = prompt('Most recently I worked in Cannabis Tech?');
+
+answer4 = answer4.toUpperCase();
 
 console.log(answer4);
 
-if (answer4 == "YES"){
-  alert("Correct!");
-}  else if (answer4 == "NO") {
-  alert("oops, read again");
+while (answer4 !== "YES" && answer4 !== "NO"){
+  answer4 = prompt("yes or no please!").toUpperCase()
 }
 
-var answer5 = prompt("Did this inspire me to keep learn coding?");
+if (answer4 == 'YES'){
+  alert('Correct!');
+  display = (display + 1)
+}  else if (answer4 == 'NO') {
+  alert('oops, read again');
+}
 
-var answer5 = answer5.toUpperCase();
+
+// Question 5
+var answer5 = prompt('Did this inspire me to keep learn coding?');
+
+answer5 = answer5.toUpperCase();
 
 console.log(answer5);
 
-if (answer5 == "YES"){
-  alert("Correct!");
-} else if (answer5 == "NO") {
-  alert("oops, read again");
+while (answer5 !== "YES" && answer5 !== "NO"){
+  answer5 = prompt("yes or no please!").toUpperCase()
 }
 
-document.write("<h3 class=\"title\"\>" + name + "!" + "</h3>" + "<h3>" + "Congratulations on finishing the test!" + "</h3>" + "<p>" + "You answered: " + "</p>" + "<ul>" + "<li>" + answer1 + "</li>" + "<li>" + answer2 + "</li>" + "<li>" + answer3 + "</li>" + "<li>" + answer4 + "</li>" + "<li>" + answer5 + "</li>"+ "</ul>" ); 
+if (answer5 == 'YES'){
+  alert('Correct!');
+  display = (display + 1)
+} else if (answer5 == 'NO') {
+  alert('oops, read again');
+}
+
+
+// Number Guesser
+var choice = prompt("Guess a Number!")
+var correct = 15
+
+for (var i = 1; i < 4; i++) {
+  
+  if (choice === correct) break;
+  if (choice > correct) {
+    choice = prompt("Too Big!")
+  } else if (choice < correct) {
+    choice = prompt("Too Small!")
+  } else if (choice == correct) {
+    aert("Correct!")
+    display = (display + 1)
+  }
+  } if (i === 4) {
+  alert("Oops, the answer is 15!")
+}
+
+
+// MultiChoice Question
+var multiChoice = ["COMMUNITY DEVELOPMENT" , "DRAMATURGY" ]
+var choose = prompt("What was 1 of my Majors in college?").toUpperCase()
+
+for (var i = 0; i < 5; i++ ) { 
+
+  if (choose === multiChoice[0]) {
+    alert("Correct!")
+    display = (display + 1)
+  }
+  if (choose === multiChoice[1]) {
+    alert("Correct!")
+    display = (display + 1)
+  } else if (choose !== multiChoice) {
+    choose = prompt("Try Again").toUpperCase()
+  } break ;
+
+}
+
+// Write results to the document 
+
+document.write('<h3 class="title"\>' + name + '!' + '</h3>' + '<h3>' + 'Congratulations on finishing the test!' + '</h3>' + "<p>" + 'You answered: ' + "</p>" + "<h3>" + display + "/7" + "</h3>" + "<p>" +" correct!" + "</p>")
+
+
+
+
+
