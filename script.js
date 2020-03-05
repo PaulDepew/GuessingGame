@@ -111,7 +111,6 @@ var correct = 15
 
 for (var i = 1; i < 4; i++) {
 
-  if (choice === correct) break ;
   if (choice > correct) {
     choice = prompt('Too Big!')
   } else if (choice < correct) {
@@ -119,6 +118,7 @@ for (var i = 1; i < 4; i++) {
   } else if (choice == correct) {
     alert('Correct!')
     display = (display + 1)
+    break ;
   }
 } if (i === 4) {
   alert('Oops, the answer is 15!')
@@ -132,17 +132,18 @@ var choose = prompt('What was 1 of my Majors in college?').toUpperCase()
 for ( i = 0; i < 5; i++ ) {
 
   if (choose === multiChoice[0]) {
-    alert('Correct!')
-    display = (display + 1)
+    alert('Correct!') ;
+    display = (display + 1) ;
+    break ;
   }
   if (choose === multiChoice[1]) {
     alert('Correct!')
     display = (display + 1)
   } else if (choose !== multiChoice) {
     choose = prompt('Try Again').toUpperCase()
-  } if (choose === multiChoice) break ;
+  } 
 
-} if (i === 5) {
+} if (i === 4) {
   alert("The answers were: " multiChoice[0] + " " + multiChoice[1])
 }
 
