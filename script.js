@@ -138,7 +138,8 @@ for ( i = 0; i < 5; i++ ) {
   }
   if (choose === multiChoice[1]) {
     alert('Correct!')
-    display = (display + 1)
+    display = (display + 1) 
+    break ;
   } else if (choose !== multiChoice) {
     choose = prompt('Try Again').toUpperCase()
   } 
