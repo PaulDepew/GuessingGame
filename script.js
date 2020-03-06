@@ -65,7 +65,7 @@ function multiAnswer(multiQues, multiChoice, attempts) {
       } else {
         multiQues = prompt('Wrong! Guess Again!').toUpperCase();
       }
-    } 
+    }
   }
 }
 

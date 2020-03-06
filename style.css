@@ -1,5 +1,5 @@
 body {
-    background-color: #efefef ;
+    background-color: #eeeeee ;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -13,21 +13,21 @@ quote {
 
 header {
     height: 100px; 
-    background-color: #00c5b9 ;
+    background-color: #508593 ;
     border-radius: -35%;
 }
 header h2 {
-    color: #f05768;
+    color: #f2d2ec;
     margin-left: 25px;
     padding-top: 35px;
 }
 
 p {
-    color: #2f3848 ;
+    color: #121214 ;
 }
 
 main h3 {
-    color: #c50000 ; 
+    color: #544f63 ; 
 }
 
 ul li {
@@ -36,11 +36,6 @@ ul li {
     padding: 10px 10px 10px 10px; 
 }
 
-ul {
-    background-color: #7388ac; 
-    
-}
-
 .title {
-    color:  #00c5b9 ;
+    color:  #508593 ;
 }
