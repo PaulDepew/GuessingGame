@@ -8,10 +8,8 @@ alert(name + '!' + ' Where have you been all my life?!?!?');
 var score = 0 ;
 
 
-// This is a series of 5 Ask Name Questions. They are configured with the same function.
-function yeaOrNay(question, correct){
+// This is a series of 5 yes or no Questions. 
   var response = prompt(question).toUpperCase();
-  console.log('Original case:' + response);
   if (response === correct) {
     alert('Good job! You\'re paying attention!');
     score++;
@@ -25,14 +23,12 @@ yeaOrNay('Was I an Opera Performer?' , 'YES');
 yeaOrNay('Most recently I worked in Cannabis Tech?', 'YES');
 yeaOrNay('Did this inspire me to keep learn coding?' , 'YES');
 
+
 // Number Guesser
-
-function yesOrNo(question, correct) {
+function numberGame(question, correct) {
   var choice = prompt(question);
-  var correct = 15;
 
-  for (var i = 1; i < 4; i++) {
-
+  for (var i = 0; i <= 4; i++) {
     if (choice > correct) {
       choice = prompt('Too Big!');
     } else if (choice < correct) {
@@ -47,7 +43,7 @@ function yesOrNo(question, correct) {
   }
 }
 
-yesOrNo('Guess the number', '15');
+numberGame('Guess the number', '15');
 
 // MultiChoice Question
 
