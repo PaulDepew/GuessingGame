@@ -1,14 +1,14 @@
 'use strict';
 
 
-// This is a series of 5 Ask Name Questions. They are configured with the same function.
 var name = prompt('Welcome! What is your name?!?!').toUpperCase();
-
 
 alert(name + '!' + ' Where have you been all my life?!?!?');
 
 var score = 0 ;
 
+
+// This is a series of 5 Ask Name Questions. They are configured with the same function.
 function yeaOrNay(question, correct){
   var response = prompt(question).toUpperCase();
   console.log('Original case:' + response);
