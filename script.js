@@ -8,7 +8,8 @@ alert(name + '!' + ' Where have you been all my life?!?!?');
 var score = 0 ;
 
 
-// This is a series of 5 yes or no Questions. 
+// This is a series of 5 yes or no Questions.
+function yeaOrNay (question, correct) {
   var response = prompt(question).toUpperCase();
   if (response === correct) {
     alert('Good job! You\'re paying attention!');
